@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="info_container">
+    <br><br><br>
+    <h1 class="title">Know Me Better</h1>
+    <p class="info">Hi Everyone, I am <b>Anjanee Devi</b>!</p>
+    <p class="info">
+        I am passionate about <b>full-stack development</b>, building scalable and efficient applications. <br>
+        I enjoy working with <b>Python, Django, and SQL</b> to create robust backend systems <br>
+        and use <b>Bootstrap</b> to design responsive and user-friendly interfaces.
+    </p>
+    <p class="info"><b>Apart from coding, some other activities that I love to do!</b></p>
+    <p class="info"> 📚 Reading Novels</p>
+    <p class="info">🧩 Solving Puzzles</p>
+    <p class="info">✍️ Exploring New Tech</p>
+</div>
+<h1 class="title">My Education Journey</h1>
+<div class="timeline">
+    <div class="timeline-item left">
+        <div class="content">
+            <h2>Nagarjuna E.M High School</h2>
+            <p>SSC - 10 CGPA</p>
+            <p>Year: 2018</p>
+        </div>
+        <div class="connector"></div>
+    </div>
+
+    <div class="timeline-item right">
+        <div class="connector"></div>
+        <div class="content">
+            <h2>Nagarjuna Junior College</h2>
+            <p>Intermediate - 9.8 CGPA</p>
+            <p>Year: 2020</p>
+        </div>
+    </div>
+
+    <div class="timeline-item left">
+        <div class="content">
+            <h2>DVR & Dr. HS MIC College of Technology</h2>
+            <p>B.Tech - 8.3 CGPA</p>
+            <p>Year: 2024</p>
+        </div>
+        <div class="connector"></div>
+    </div>
+</div>
+
+<!-- Skills -->
+<h1 class="title">My Tech Stack</h1>
+<div class="skills">
+    <div class="skill_container">
+        <i class="fa-brands fa-python"></i>
+        <h1>Python</h1>
+    </div>
+    <div class="skill_container">
+        <i class="fa-brands fa-html5"></i>
+        <h1>HTML</h1>
+    </div>
+    <div class="skill_container">
+        <i class="fa-brands fa-css3-alt"></i>
+        <h1>CSS</h1>
+    </div>
+    <div class="skill_container">
+        <i class="fa-solid fa-database"></i>
+        <h1>SQL</h1>
+    </div>
+    <div class="skill_container">
+        <i class="fa-brands fa-bootstrap"></i>
+        <h1>Bootstrap</h1>
+    </div>
+    <div class="skill_container">
+        <i class="fa-solid fa-leaf"></i>
+        <h1>Django</h1>
+    </div>
+</div>
+
+<!-- Tools -->
+<h1 class="title">Tools</h1>
+<div class="tools">
+    <div class="tool_container">
+        <i class="fa-brands fa-github"></i>
+        <h1>GitHub</h1>
+    </div>
+    <div class="tool_container">
+        <i class="fa-solid fa-code"></i>
+        <h1>VS Code</h1>
+    </div>
+    <div class="tool_container">
+        <img src="{% static 'vercel.png' %}" alt="" id="vercel_img">
+        <h1>Vercel</h1>
+    </div>
+    <div class="tool_container">
+        <i class="fa-solid fa-train"></i>
+        <h1>Railway</h1>
+    </div>
+    <div class="tool_container">
+        <i class="fa-solid fa-cloud"></i>
+        <h1>Render</h1>
+    </div>
+    <div class="tool_container">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <h1>Cloudinary</h1>
+    </div>
+</div>
+
+<br><br><br>
+<p class="info_quote">
+    <i>"With curiosity as my guide,<br> persistence as my strength,<br> and hard work as my fuel, <br>
+    I build, learn, and grow every day!"</i>
+</p>
+<p class="info">~ Anjanee Devi</p>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".timeline-item");
+
+        function checkScroll() {
+            items.forEach((item) => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    item.classList.add("show");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", checkScroll);
+        checkScroll();
+    });
+</script>
+
+{% endblock %}

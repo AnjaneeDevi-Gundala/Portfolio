@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'project.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="mb-4" style="color: #00aaff;margin-top: 100px;">My Creations</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Project 1 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'travelling.jpg' %}" class="card-img-top" alt="Project 1">
+                <div class="card-body">
+                    <h5 class="card-title">Spirit Adventures</h5>
+                    <p class="card-text"> Travel Companion - Your Ultimate Travel Guide <br>
+
+                        A feature-rich travel website built using Python and Django, designed to provide users with an
+                        interactive and seamless travel planning experience.
+                        <br>
+                        ✨ Features: <br>
+                        ✅ User Authentication <br>
+                        ✅ Booking System <br>
+
+                        🔗 Tech Stack: Python, Django, Bootstrap, SQL
+                    </p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="https://github.com/AnjaneeDevi-Gundala/Spirit-Adventures" class="btn btn-custom"
+                            target="_blank">GitHub</a>
+                        <!-- <a href="https://spiritadventures.onrender.com/" class="btn btn-custom" target="_blank">Live Demo</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'blogging.png' %}" class="card-img-top" alt="Project 2">
+                <div class="card-body">
+                    <h5 class="card-title">Blog Application</h5>
+                    <p class="card-text">
+                        Your Ultimate Blogging Platform <br>
+                        A dynamic blog application built using Python and Django, designed to provide users with a
+                        seamless and engaging platform to share their thoughts. <br>
+                        ✨ Features:
+                        ✅ User Authentication <br>
+                        ✅ Create & Manage Blogs <br>
+                        ✅ Responsive Design <br>
+
+                        🔗 Tech Stack: Python, Django, Bootstrap, SQL
+                    </p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="https://github.com/AnjaneeDevi-Gundala/Blog_App" class="btn btn-custom"
+                            target="_blank">GitHub</a>
+                        <a href="https://blog-app-anjanee-devi.vercel.app/" class="btn btn-custom" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'object.png' %}" class="card-img-top" alt="Project 3">
+                <div class="card-body">
+                    <h5 class="card-title">Surveillance drone with Object detection</h5>
+                    <p class="card-text">An advanced surveillance drone with real-time object detection, designed for efficient security and monitoring applications.
+                        <br>
+                        ✨ Features: <br>
+                        ✅ Real-Time Object Detection <br>
+                        ✅ High-Accuracy Recognition with COCO Dataset
+                        
+                        🔗 Tech Stack: Python, OpenCV, MobileNet,<br> COCO Dataset</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="https://github.com/AnjaneeDevi-Gundala/Object_detection" class="btn btn-custom"
+                            target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <br><br>
+    <p id="text">Inspired by My work? Let's Connect and create!</p>
+    <a href="{% url 'app1:contact' %}"  class="btn btn-custom">Reach Out</a>
+</div>
+{% endblock %}

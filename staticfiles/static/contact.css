@@ -1,0 +1,45 @@
+.container {
+    max-width: 90%;
+    padding: 15px;
+    color: white;
+}
+
+/* Responsive Image */
+img {
+    width: 65%;
+    max-width: 250px;
+    height: 170px;
+    border-radius: 50%;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.bg-light{
+    color: darkblue;
+}
+.bg-light:hover{
+    color: #007bff;
+
+}
+/* Centering form on small screens */
+@media (max-width: 768px) {
+    .container {
+        text-align: center;
+    }
+    
+    form {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .d-flex {
+        flex-direction: column;
+    }
+    img{
+        width: 70%;
+    }
+}
