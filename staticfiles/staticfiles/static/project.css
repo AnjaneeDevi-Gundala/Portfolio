@@ -1,0 +1,27 @@
+.card {
+    background-color: transparent;
+    color: white;
+    border: none;
+    transition: 0.3s;
+    border: 1px solid lightgray;
+    /* box-shadow: 0 0 15px rgba(0, 170, 255, 0.7); */
+
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+}
+.card-img-top{
+    height: 220px;
+}
+.btn-custom {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+}
+.btn-custom:hover {
+    background-color: #0088cc;
+}
+#text{
+    font-size: 1.2rem;
+}
